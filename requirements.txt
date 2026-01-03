@@ -1,3 +1,6 @@
 playwright
 pandas
 matplotlib
+wordcloud
+emoji
+indic-transliteration
