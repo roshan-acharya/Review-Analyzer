@@ -6,6 +6,10 @@ from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
 import nltk
 from nltk.stem import WordNetLemmatizer
+from pathlib import Path
+
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 nltk.download('words')
@@ -97,6 +101,12 @@ def preprocess(path):
     combined_df['review']=combined_df['review'].apply(normalize_review) #convert roman to nepali translitation
 
     return combined_df
+
+def clean_data(path):
+    save_path=BASE_DIR / 'Data/Cleaned/review.csv'
+    combined_df=preprocess(path)
+    combined_df.to_csv(save_path,index=False)
+    
 
 
 
