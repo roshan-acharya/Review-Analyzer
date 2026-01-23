@@ -4,3 +4,7 @@ matplotlib
 wordcloud
 emoji
 indic-transliteration
+transformers
+torch
+scikit-learn
+datasets
