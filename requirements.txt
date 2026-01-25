@@ -8,3 +8,11 @@ transformers
 torch
 scikit-learn
 datasets
+bertopic
+sentence-transformers
+numpy
+hf_xet
+umap-learn
+cython
+hdbscan
+keybert
