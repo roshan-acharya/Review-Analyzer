@@ -115,13 +115,10 @@ def bert_topic(url):
         # summarize reviews
         summary = summarizer(reviews_text, max_length=50, min_length=20, do_sample=False)[0]['summary_text']
         
-        # Print results
-        print(f"\n🔹 Topic: {topic_name} ({t['count']} reviews)")
-        print("Summary:", summary)
-        
-        print("Reviews:")
-        for r in t["reviews"]:
-            print(" -", r)
+        # return all info like topics , name , keywords , summary
+        for key, value in t.items():
+            print(f"{key}: {value}")
+
             
 
 
