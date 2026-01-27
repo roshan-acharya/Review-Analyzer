@@ -1,5 +1,8 @@
 from transformers import pipeline
-model_path = r"C:\Users\Roshan Acharya\Documents\Roshan\Projects\Review-Analyzer\notebook\Models\xlm-finetuned-sentiment-save"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+model_path = 'notebook/models/xlm-finetuned-sentiment-save'
 sentiment_model = pipeline(
     "text-classification",
     model=model_path,

@@ -20,7 +20,7 @@ if st.button("Analyze"):
     else:
         with st.spinner("Scraping reviews & analyzing topics..."):
             res = requests.post(
-                "http://localhost:8000/analyze",
+                "http://127.0.0.1:8000/analyze",
                 params={"url": url}
             ).json()
 
