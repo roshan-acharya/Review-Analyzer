@@ -98,18 +98,33 @@ def preprocess(path):
     combined_df['review']=combined_df['review'].apply(remove_punctuation) #remove punctuations
     combined_df['review']=combined_df['review'].apply(emoji_to_text) # convert emoji to its corresponding meaning
     combined_df['review']=combined_df['review'].apply(handling_symbol) #handle symbol like :,_ from emoji
-    combined_df['review']=combined_df['review'].apply(normalize_review) #convert roman to nepali translitation
-
     return combined_df
 
 def clean_data(path):
     save_path=BASE_DIR / 'Data/Cleaned/review.csv'
     combined_df=preprocess(path)
     combined_df.to_csv(save_path,index=False)
+
+
     
 
 
 
+def preprocess_reviews_to_list_roman(reviews):
+
+    normalized_reviews = []
+
+    for review in reviews:
+        if not isinstance(review, str) or review.strip() == "":
+            continue
+
+        text = review.lower()
+        text = emoji.demojize(text)            # emoji -> :smile:
+        text = text.replace("_", " ").replace(":", "")  # clean emoji text
+        text = text.translate(str.maketrans("", "", string.punctuation))  # remove punctuation
+
+
+    return text
 
 
     
