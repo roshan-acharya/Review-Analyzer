@@ -18,3 +18,4 @@ hdbscan
 keybert
 nltk
 fastapi
+uvicorn
