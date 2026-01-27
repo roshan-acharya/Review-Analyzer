@@ -25,7 +25,8 @@ URL=[#'https://www.daraz.com.np/products/aluminium-alloy-metal-adjustable-laptop
 def scrape_reviews(url):
     reviews_data=[]
     with sync_playwright() as p:
-        browser=p.chromium.launch(headless=False)
+        browser=p.chromium.launch(headless=True)
+        args=["--disable-blink-features=AutomationControlled"]
         page=browser.new_page()
         page.goto(url, timeout=60000)
 

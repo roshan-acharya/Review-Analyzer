@@ -16,3 +16,4 @@ umap-learn
 cython
 hdbscan
 keybert
+nltk
