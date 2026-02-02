@@ -77,9 +77,7 @@ The system is designed to work with **English, Nepali, and code-mixed reviews**,
 
 ### 🔧 Fine-tuning Diagram
 
-<p align="center">
 ![Fine-tuning Diagram](assets/finetuning.png)
-</p>
 
 ### Fine-tuning Process (XLM-RoBERTa)
 
@@ -100,7 +98,6 @@ The system is designed to work with **English, Nepali, and code-mixed reviews**,
 git clone https://github.com/roshan-acharya/Review-Analyzer.git
 cd Review-Analyzer
 ```
-
 
 ### 2. Create virtual environment
 
