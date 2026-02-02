@@ -77,7 +77,8 @@ The system is designed to work with **English, Nepali, and code-mixed reviews**,
 
 ### 🔧 Fine-tuning Diagram
 
-![Fine-tuning Diagram](assets/finetuning.png)
+<p align="center">
+![Fine-tuning Diagram](assets/finetuning.png)</p>
 
 ### Fine-tuning Process (XLM-RoBERTa)
 
