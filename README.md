@@ -96,16 +96,9 @@ The system is designed to work with **English, Nepali, and code-mixed reviews**,
 
 ```bash
 git clone https://github.com/roshan-acharya/Review-Analyzer.git
-cd daraz-review-analyzer
+cd Review-Analyzer
 ```
 
-### 2. Create virtual environment
-
-```
-python -m venv venv
-source venv/bin/activate      # Linux / Mac
-venv\Scripts\activate         # Windows
-```
 
 ### 2. Create virtual environment
 
