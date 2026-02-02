@@ -77,7 +77,12 @@ def bert_topic(url):
         keywords = kw_model.extract_keywords(
             reviews_text,
             top_n=2,
-            keyphrase_ngram_range=(1, 2)
+            keyphrase_ngram_range=(1, 2),
+            stop_words="english",
+            diversity=0.5,
+            use_mmr=True
+
+
         )
         keyword_list = [k[0] for k in keywords]
         topic_name = ", ".join(keyword_list)
